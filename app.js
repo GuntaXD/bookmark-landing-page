@@ -27,3 +27,28 @@ for( let i = 0 ; i < social_links.length ; i++ ){
     });
 
 }
+
+// funcionalidad de features
+
+let features = document.querySelector(".features");
+let options = features.getElementsByClassName("option");
+let article = features.getElementsByClassName("article");
+
+for( let i = 0; i < options.length ; i++ ){
+
+    options[i].addEventListener("click" , ()=>{
+
+        for( let i = 0; i < options.length ; i++ ){
+
+            if( options[i].classList.contains("active") ){
+                options[i].classList.toggle("active");
+                article[i].classList.toggle("active");
+            }
+
+        }
+
+        options[i].classList.toggle("active");
+        article[i].classList.toggle("active");
+
+    });
+}
