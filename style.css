@@ -428,6 +428,86 @@ a{
                     display: none;
                 }
 
+/* ------------------DOWNLOAD THE EXTENSION----------------------------- */
+
+.download{
+    /* background-color: orange; */
+    width: 100%;
+    /* display: flex; */
+    margin-top: 4em;
+}
+
+    .download__text{
+        width: 100%;
+        padding: 0 4%;
+    }
+
+        .download__title{
+            color: var(--very-dark-blue);
+            text-align: center;
+        }
+
+        .download__paragraph{
+            width: 100%;
+            text-align: center;
+            margin: 1em 0;
+            font-size: calc( .9em + .4vw);
+            line-height: 1.5em;
+            color: var(--grayish-blue);
+        }
+
+    .download__options{
+        width: 100%;
+        margin: 2em 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+        .download__card{
+            height: 50vh;
+            width: 80%;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 1px var(--grayish-blue);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            margin: 1em 0;
+        }
+
+            .download__info{
+                height: 70%;
+                text-align: center;
+                width: 100%;
+                /* border-bottom: 6px dotted var(--grayish-blue); */
+            }
+
+                .download__name{
+                    margin: 2em 0 .5em ;
+                    font-size: calc( 1.2em + .4vw );
+                }
+
+                .download__requeriments{
+                    font-size: calc( .9em + .2vw );
+                }
+
+            .download__link{
+                background-color: var(--soft-blue);
+                height: 14%;
+                width: 80%;
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: var(--white);
+            }
+
+            .download__link:hover{
+                background-color: transparent;
+                border: 2px solid var(--soft-blue);
+                color: var(--soft-blue);
+            }
 /* -320px 480px 600px 768px 1024px */
 
 @media all and ( min-width: 320px){
@@ -467,6 +547,17 @@ a{
         width: 80%;
         height: 90%;
     }
+
+    /* ------------------DOWNLOAD -------------------------------- */
+
+    .download__options{
+        justify-content:space-around;
+    }
+
+        .download__card{
+            width: 30%;
+            min-width: 200px;
+        }
 }
 
 @media all and ( min-width: 768px){
@@ -554,6 +645,26 @@ a{
             right: 24%;
         }
 
+/* ------------------DOWNLOAD THE EXTENSION----------------------------- */
+    .download__text{
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .download__options{
+        width: 84%;
+        margin: 0 auto;
+    }
+
+    .download__card.uno{
+        position: relative;
+        top: 3em;
+    }
+
+    .download__card.dos{
+        position: relative;
+        top: 6em;
+    }
 }
 
 @media all and ( min-width: 1024px){
@@ -632,5 +743,13 @@ a{
         height: 110%;
     }
 
+    /* -----------------DOWNLOAD AND INSTALL------------------ */
 
+    .download__options{
+        width: 70%;
+    }
+
+        .download__card{
+            width: 26%;
+        }
 }
