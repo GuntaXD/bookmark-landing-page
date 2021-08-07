@@ -310,6 +310,7 @@ a{
         .features__title{
             text-align: center;
             color: var(--very-dark-blue);
+            font-size: calc( 1.4em + .6vw );
         }
 
         .features__paragraph{
@@ -445,6 +446,7 @@ a{
         .download__title{
             color: var(--very-dark-blue);
             text-align: center;
+            font-size: calc( 1.4em + .6vw );
         }
 
         .download__paragraph{
@@ -486,10 +488,12 @@ a{
                 .download__name{
                     margin: 2em 0 .5em ;
                     font-size: calc( 1.2em + .4vw );
+                    color: var(--very-dark-blue);
                 }
 
                 .download__requeriments{
                     font-size: calc( .9em + .2vw );
+                    color: var(--grayish-blue);
                 }
 
             .download__link{
@@ -508,6 +512,107 @@ a{
                 border: 2px solid var(--soft-blue);
                 color: var(--soft-blue);
             }
+
+/* ---------------------------FAQ-------------------------------------- */
+
+.faq{
+    width: 100%;
+    margin-top: 6em;
+    margin-bottom: 6em;
+}
+
+    .faq__info{
+        width: 100%;
+        padding: 0 4%;
+        text-align: center;
+    }
+
+        .faq__title{
+            color: var(--very-dark-blue);
+            text-align: center;
+            font-size: calc( 1.4em + .6vw );
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .faq__paragraph{
+            width: 100%;
+            text-align: center;
+            margin: 1em 0;
+            font-size: calc( .9em + .4vw);
+            line-height: 1.5em;
+            color: var(--grayish-blue);
+        }
+
+    .faqs{
+        width: 100%;
+        padding: 0 4%;
+        margin-top: 3em;
+    }
+
+        .ask__container{
+            width: 100%;
+            border-bottom: 1px solid var(--grayish-blue);
+        }
+
+            .ask{
+                min-height: 4em;
+                width: 100%;
+                position: relative;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                color: var(--very-dark-blue);
+                font-size: calc( 1em + .1vw);
+            }
+
+            .ask__arrow , .ask__arrow--active{
+                position: absolute;
+                right: 0;
+                top: calc( 2em - 3px);
+            }
+
+            .ask__arrow--active{
+                display: none;
+            }
+
+            .ask__container:hover > .ask{
+                color: var(--soft-red);
+            }
+
+            .answer{
+                width: 100%;
+                display: none;
+                color: var(--grayish-blue);
+            }
+
+            .ask__container.active .answer{
+                display: block;
+                margin-top: 1em;
+                margin-bottom: 2em;
+                animation: crecimiento 1s forwards;
+            }
+
+            .ask__container.active .ask__arrow{
+                display: none;
+            }
+
+            .ask__container.active .ask__arrow--active{
+                display: block;
+                animation: rotacion .5s forwards;
+            }
+
+        .faq__link{
+            background-color: var(--soft-blue);
+            height: 3em;
+            width: 40%;
+            margin: 2em auto;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+        }
 /* -320px 480px 600px 768px 1024px */
 
 @media all and ( min-width: 320px){
@@ -558,6 +663,17 @@ a{
             width: 30%;
             min-width: 200px;
         }
+
+    /* ---------------------------FAQS------------------------------------------------ */
+
+    .faqs{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .faq__link{
+        width: 30%;
+    }
 }
 
 @media all and ( min-width: 768px){
@@ -665,6 +781,30 @@ a{
         position: relative;
         top: 6em;
     }
+
+    /* ---------------------------FAQ--------------------------------------------- */
+
+    .faq{
+        margin-top: 10em;
+    }
+
+        .faq__info{
+            width: 50%;
+            margin: 0 auto;
+        }
+
+            .faq__title{
+                width: 100%;
+            }
+
+        .faqs{
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        .faq__link{
+            width: 20%;
+        }
 }
 
 @media all and ( min-width: 1024px){
@@ -752,4 +892,32 @@ a{
         .download__card{
             width: 26%;
         }
+
+    /* --------------------------FAQ------------------------------------ */
+
+    .faq__link{
+        width: 10%;
+    }
+}
+
+@keyframes rotacion {
+
+    from{
+        transform: rotate( 0deg);
+    }
+    to{
+        transform: rotate(-180deg);
+    }
+
+}
+
+@keyframes rotacionInv {
+
+    from{
+        transform: rotate( -180deg);
+    }
+    to{
+        transform: rotate( 0deg);
+    }
+
 }

@@ -52,3 +52,24 @@ for( let i = 0; i < options.length ; i++ ){
 
     });
 }
+
+
+// funcionalidades de FAQ
+
+let faqs = document.querySelector(".faqs");
+let ask_container = faqs.getElementsByClassName("ask__container");
+
+let arrow = faqs.getElementsByClassName("ask__arrow");
+
+for( let i = 0; i < ask_container.length ; i++ ){
+
+    ask_container[i].addEventListener("click" , ()=>{
+        ask_container[i].classList.toggle("active");
+        
+        if ( !ask_container[i].classList.contains("active") ){
+            arrow[i].style.cssText = "animation: rotacionInv .5s;";
+        }
+
+    });
+}
+
